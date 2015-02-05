@@ -1,6 +1,6 @@
 {
   "name": "swagger-editor-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "swagger editor server that serves local file to the editor and update the file on every change",
   "author": "Boris Sirota <borisirota@gmail.com>",
   "license": "MIT",
