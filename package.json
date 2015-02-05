@@ -1,0 +1,62 @@
+{
+  "name": "swagger-editor-server",
+  "version": "0.0.2",
+  "description": "swagger editor server that serves local file to the editor and update the file on every change",
+  "author": "Boris Sirota <borisirota@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/borisirota/swagger-editor-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/borisirota/swagger-editor-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/borisirota/swagger-editor-server/issues"
+  },
+  "keywords": [
+    "swagger",
+    "swagger-editor",
+    "server"
+  ],
+  "contributors": [
+    "Boris Sirota <borisirota@gmail.com>"
+  ],
+  "main": "./lib",
+  "scripts": {
+    "lint": "jshint --reporter node_modules/jshint-stylish/stylish.js lib/**.js",
+    "style": "jscs --reporter node_modules/jscs-stylish/jscs-stylish.js lib/**.js",
+    "format": "jsfmt -w lib/**.js",
+    "code-check": "npm run lint -s && npm run style -s",
+    "pretest": "npm run code-check -s",
+    "test": "mocha test/",
+    "docs": "jsdoc2md lib/index.js -t readme.hbs | jsdoc2md-anchors > README.md",
+    "watch": "watch 'npm run code-check -s' lib/",
+    "security": "nsp audit-package",
+    "prerelease": "npm run docs -s && git add README.md && git commit --allow-empty -m \"readme update\"",
+    "release": "npm version patch -m 'Bumped to %s'",
+    "postrelease": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "esformatter-braces": "~1.0.0",
+    "esformatter-dot-notation": "~1.1.0",
+    "esformatter-quotes": "~1.0.0",
+    "esformatter-semicolons": "~1.0.3",
+    "jscs": "^1.9.0",
+    "jscs-stylish": "^0.3.1",
+    "jsdoc-to-markdown": "^0.5.9",
+    "jsdoc2md-anchors": "^0.0.2",
+    "jsfmt": "^0.4.0",
+    "jshint": "^2.5.11",
+    "jshint-stylish": "^1.0.0",
+    "mocha": "^2.1.0",
+    "nsp": "^0.5.2",
+    "supertest": "~0.15.0",
+    "watch": "^0.13.0"
+  },
+  "dependencies": {
+    "connect": "~3.3.3",
+    "open": "0.0.5",
+    "serve-static": "~1.7.1",
+    "swagger-editor": "~2.8.1"
+  }
+}
