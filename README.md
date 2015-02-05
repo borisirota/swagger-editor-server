@@ -1,18 +1,20 @@
 # README #
 
-** Install **
+**Install**
 
-    npm install git+ssh://git@bitbucket.org:teraficswagger/swagger-editor.git --save
+    npm install swagger-editor-server --save
 
-#swagger-editor
-swagger-editor
+<a name="module_swagger-editor-server"></a>
+#swagger-editor-server
+swagger editor server that serves local file to the editor and update the file on every change
 
 **Example**  
 ```javascript
-    var editor = require("swagger-editor");
+    var editor = require("swagger-editor-server");
 ```
 
-##swagger-editor.edit(swaggerFile)
+<a name="module_swagger-editor-server.edit"></a>
+##editor.edit(swaggerFile)
 opens the browser and enables live edit of the swagger api file
 
 **Params**
@@ -23,3 +25,5 @@ opens the browser and enables live edit of the swagger api file
 ```javascript
     editor.edit(swaggerFile);
 ```
+
+
