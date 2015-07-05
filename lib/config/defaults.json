@@ -33,6 +33,7 @@
   "useYamlBackend": true,
   "disableFileMenu": true,
   "headerBranding": false,
+  "disableNewUserIntro": true,
   "enableTryIt": false,
   "brandingCssClass": "",
   "schemaUrl": "/schema/swagger.json",
