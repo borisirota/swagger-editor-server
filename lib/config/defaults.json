@@ -37,5 +37,6 @@
   "enableTryIt": false,
   "brandingCssClass": "",
   "schemaUrl": "/schema/swagger.json",
-  "importProxyUrl": "https://cors-it.herokuapp.com/?url="
+  "importProxyUrl": "https://cors-it.herokuapp.com/?url=",
+  "pointerResolutionBasePath": ""
 }
